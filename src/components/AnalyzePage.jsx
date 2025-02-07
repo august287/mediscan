@@ -249,7 +249,7 @@ function AnalyzePage() {
                 muted
                 className={`w-full h-full object-cover bg-gray-900 ${showPreview ? 'block' : 'hidden'}`}
               />
-              <canvas 
+              <canvas
                 ref={canvasRef}
                 className={`w-full h-full object-contain bg-gray-100 ${showPreview ? 'hidden' : 'block'}`}
               />
@@ -259,9 +259,8 @@ function AnalyzePage() {
                 <button
                   onClick={captureAndAnalyze}
                   disabled={isModelLoading || isAnalyzing || !isVideoReady}
-                  className={`w-16 h-16 flex items-center justify-center ${
-                    (!isVideoReady || isModelLoading) ? 'opacity-50 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-16 h-16 flex items-center justify-center ${(!isVideoReady || isModelLoading) ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
                   aria-label="Capture and analyze"
                 >
                   <div className="absolute w-14 h-14 bg-white rounded-full opacity-80"></div>
@@ -300,6 +299,8 @@ function AnalyzePage() {
             ⚠
           </div>
           <p className="text-yellow-800 text-sm md:text-base">
+            <span className="font-bold">Tip!:</span> Make sure to have an ample amount of light in the environment when using this analyzer to get the most accurate results!
+            <br></br>
             <span className="font-bold">Medical Disclaimer:</span> This tool is designed to help identify burn severity levels but should not be considered as a definitive medical assessment. Always seek professional medical advice for proper diagnosis and treatment of burns.
           </p>
         </div>
