@@ -1,8 +1,8 @@
 {
+  "homepage": "https://august287.github.io/mediscan",
   "name": "mediscan",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/mediscan",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^18.2.0",
