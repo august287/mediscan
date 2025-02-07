@@ -22,6 +22,8 @@ function AnalyzePage() {
   const videoRef = useRef(null)
   const canvasRef = useRef(null)
   const [isVideoReady, setIsVideoReady] = useState(false)
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
+
 
   useEffect(() => {
     let isMounted = true
@@ -293,18 +295,38 @@ function AnalyzePage() {
       </div>
 
       {/* Disclaimer */}
-      <div className="fixed bottom-0 left-0 right-0 w-full backdrop-blur-md bg-gradient-to-r from-yellow-400/20 to-yellow-200/20 border-t border-yellow-400/30 shadow-lg shadow-yellow-400/10">
-        <div className="container mx-auto px-4 py-4 flex items-center gap-4">
-          <div className="text-3xl text-yellow-600">
-            ⚠
+      {showDisclaimer && (
+        <div className="fixed bottom-0 left-0 right-0 w-full backdrop-blur-md bg-gradient-to-r from-yellow-400/20 to-yellow-200/20 border-t border-yellow-400/30 shadow-lg shadow-yellow-400/10">
+          <div className="container mx-auto px-4 py-4 flex items-center gap-4 relative">
+            <div className="text-3xl text-yellow-600">
+              ⚠
+            </div>
+            <p className="text-yellow-800 text-sm md:text-base pr-8">
+              <span className="font-bold">Important!:</span> Make sure to have an ample amount of light in the environment when using this analyzer to get the most accurate results.
+              <br></br>
+              <span className="font-bold">Medical Disclaimer:</span> This tool is designed to help identify burn severity levels but should not be considered as a definitive medical assessment. Always seek professional medical advice for proper diagnosis and treatment of burns.
+            </p>
+            <button
+              onClick={() => setShowDisclaimer(false)}
+              className="absolute top-4 right-4 text-yellow-600 hover:text-yellow-800 transition-colors"
+              aria-label="Close disclaimer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
           </div>
-          <p className="text-yellow-800 text-sm md:text-base">
-            <span className="font-bold">Tip!:</span> Make sure to have an ample amount of light in the environment when using this analyzer to get the most accurate results!
-            <br></br>
-            <span className="font-bold">Medical Disclaimer:</span> This tool is designed to help identify burn severity levels but should not be considered as a definitive medical assessment. Always seek professional medical advice for proper diagnosis and treatment of burns.
-          </p>
         </div>
-      </div>
+      )}
     </div>
   )
 }
