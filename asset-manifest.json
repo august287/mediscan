@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/mediscan/static/css/main.303ae700.css",
-    "main.js": "/mediscan/static/js/main.b5843121.js",
+    "main.js": "/mediscan/static/js/main.29ac1b36.js",
     "static/js/488.a029dda3.chunk.js": "/mediscan/static/js/488.a029dda3.chunk.js",
     "static/media/burn.png": "/mediscan/static/media/burn.76838ea1b7d6ba1042a1.png",
     "static/media/MediScan.png": "/mediscan/static/media/MediScan.f6965c6a0573d628ae3c.png",
     "index.html": "/mediscan/index.html",
     "main.303ae700.css.map": "/mediscan/static/css/main.303ae700.css.map",
-    "main.b5843121.js.map": "/mediscan/static/js/main.b5843121.js.map",
+    "main.29ac1b36.js.map": "/mediscan/static/js/main.29ac1b36.js.map",
     "488.a029dda3.chunk.js.map": "/mediscan/static/js/488.a029dda3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.303ae700.css",
-    "static/js/main.b5843121.js"
+    "static/js/main.29ac1b36.js"
   ]
 }
